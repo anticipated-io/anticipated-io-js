@@ -1,0 +1,55 @@
+{
+  "name": "anticipated-io-js",
+  "version": "1.0.0",
+  "description": "An ES6 / Typescript SDK for the anticipated.io service (https://www.anticipated.io).",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anticipated-io/anticipated-io-js.git"
+  },
+  "keywords": [
+    "events",
+    "scheduled events",
+    "scheduling",
+    "scheduler",
+    "sqs",
+    "delay processing"
+  ],
+  "author": "Chris Schuld <cbschuld@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anticipated-io/anticipated-io-js/issues"
+  },
+  "homepage": "https://github.com/anticipated-io/anticipated-io-js#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "@types/luxon": "^2.3.2",
+    "@types/node": "^17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^28.1.1",
+    "luxon": "^2.4.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^28.0.4",
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.3"
+  }
+}
