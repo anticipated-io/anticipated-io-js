@@ -22,6 +22,9 @@
     "type": "git",
     "url": "git+https://github.com/anticipated-io/anticipated-io-js.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
     "events",
     "scheduled events",
